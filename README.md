@@ -35,7 +35,7 @@ julia --project=. scripts/coverage.jl           # what the API holds, by region 
 
 The `.qmd` pages plus `docs/api-notes.md` form a [Quarto](https://quarto.org) website. `quarto preview` serves it locally; `quarto render` writes `_site/`.
 
-`.github/workflows/site.yml` renders the site on every push to `main` and uploads it as the `github-pages` artifact. The deploy job is off because GitHub Pages is not offered for private repos on the org's free plan. To turn it on: enable Pages (Settings, Pages, Source: GitHub Actions) and set the repository variable `DEPLOY_PAGES` to `true`.
+`.github/workflows/site.yml` renders the site on every push to `main` and deploys it to GitHub Pages at <https://nsf-ascend-engine.github.io/deepfire-explore/>. The deploy job runs only while the repository variable `DEPLOY_PAGES` is `true`; the render job always uploads the site as the `github-pages` artifact.
 
 ## Layout
 

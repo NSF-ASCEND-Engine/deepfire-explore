@@ -21,10 +21,9 @@ jobs:
         with:
           path: _site
   deploy:
-    # GitHub Pages is not offered for private repos on the org's free plan. Once Pages is
-    # available (Settings -> Pages -> Source: GitHub Actions), set the repository variable
-    # DEPLOY_PAGES=true to turn this job on. Until then the rendered site is the
-    # `github-pages` artifact on each run.
+    # Pages source must be "GitHub Actions" (Settings -> Pages). Set the repository variable
+    # DEPLOY_PAGES to anything but "true" to pause deploys; the render job still uploads the
+    # site as the `github-pages` artifact.
     if: vars.DEPLOY_PAGES == 'true'
     needs: render
     runs-on: ubuntu-latest
