@@ -91,6 +91,16 @@ function latest_snapshots(fc)
     sort!(collect(values(best)); by = f -> -something(f.area_m2, 0.0))
 end
 
+"Snapshots grouped by `cluster_id`, each sorted oldest first."
+function bycluster(fc)
+    d = Dict{String,Vector{eltype(fc)}}()
+    for f in fc
+        push!(get!(d, f.cluster_id, eltype(fc)[]), f)
+    end
+    foreach(v -> sort!(v; by = f -> parsetime(f.computed_at)), values(d))
+    d
+end
+
 "All perimeter snapshots for one cluster, oldest first."
 function snapshots(cluster_id)
     fc = allitems("satellite-perimeters"; filter = "cluster_id = '$cluster_id'")

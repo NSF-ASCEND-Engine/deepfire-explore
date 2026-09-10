@@ -3,3 +3,10 @@
 .token
 # cached API responses
 data/
+
+# quarto
+_site/
+.quarto/
+
+/.quarto/
+**/*.quarto_ipynb

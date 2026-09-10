@@ -1,0 +1,28 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - docs/api-notes.md
+  resources:
+    - figures/
+website:
+  title: "Deepfire exploration"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Overview
+      - href: colorado-wyoming.qmd
+        text: Colorado and Wyoming
+      - href: coverage.qmd
+        text: Data coverage
+      - href: docs/api-notes.md
+        text: API notes
+    right:
+      - href: https://github.com/NSF-ASCEND-Engine/deepfire-explore
+        icon: github
+format:
+  html:
+    theme: cosmo
+    toc: true
+    fig-cap-location: bottom

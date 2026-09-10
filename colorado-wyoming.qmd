@@ -1,0 +1,43 @@
+---
+title: "Colorado and Wyoming"
+---
+
+Bounding box -111.06 to -102.04 longitude, 36.99 to 45.0 latitude. Hotspot coverage for this region starts 2026-02-05; perimeters start 2026-06-16 (see [Data coverage](coverage.qmd)). Everything on this page comes from `scripts/colorado_wyoming.jl`.
+
+## Every fire with a perimeter
+
+![Latest perimeter snapshot for every cluster in the region since perimeters began. Numbers rank the eight largest by area.](figures/cowy_perimeters.png)
+
+## Growth curves
+
+![Perimeter area against days since the first snapshot for the eight largest fires.](figures/cowy_growth_curves.png)
+
+{{< include figures/cowy_top_fires.md >}}
+
+Snapshots are only written when the perimeter changes materially, so flat stretches with no points mean no change was recorded, not missing data.
+
+## Perimeter growth animations
+
+Each frame is one perimeter snapshot. Gray outlines are earlier snapshots; the red fill is the current one. The right panel tracks perimeter area.
+
+### Fire 1
+
+{{< video figures/animations/cowy_fire_1.mp4 >}}
+
+### Fire 2
+
+{{< video figures/animations/cowy_fire_2.mp4 >}}
+
+### Fire 3
+
+{{< video figures/animations/cowy_fire_3.mp4 >}}
+
+### Fire 4
+
+{{< video figures/animations/cowy_fire_4.mp4 >}}
+
+## Region, one frame per day
+
+Red perimeters were updated within the previous two days; gray ones are the last known perimeter of a fire that has not changed since.
+
+{{< video figures/animations/cowy_region.mp4 >}}
