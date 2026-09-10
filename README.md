@@ -29,6 +29,7 @@ Scripts (each writes to `figures/`):
 julia --project=. scripts/plot_perimeters.jl    # California and global perimeters
 julia --project=. scripts/colorado_wyoming.jl   # Colorado/Wyoming maps, growth curves, mp4 animations
 julia --project=. scripts/coverage.jl           # what the API holds, by region and time
+julia --project=. scripts/wfigs_comparison.jl   # Deepfire perimeters against WFIGS official perimeters
 ```
 
 ## Site

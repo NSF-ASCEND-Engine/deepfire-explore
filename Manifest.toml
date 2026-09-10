@@ -2,7 +2,7 @@
 
 julia_version = "1.12.7"
 manifest_format = "2.0"
-project_hash = "0e292f1e888581619ade6264dfaa8aa08d9b9b96"
+project_hash = "16e912da62e25dc5b24bb65f56392f44e32e8e85"
 
 [[deps.AbstractFFTs]]
 deps = ["LinearAlgebra"]
@@ -307,6 +307,7 @@ uuid = "ade2ca70-3891-5945-98fb-dc099432e06a"
 version = "1.11.0"
 
 [[deps.Deepfire]]
+deps = ["CairoMakie", "Dates", "GeoJSON", "GeoMakie", "HTTP", "JSON3", "NaturalEarth"]
 path = "."
 uuid = "e889d994-6cbf-4775-8fd7-96970d0de40b"
 version = "0.1.0"
@@ -487,6 +488,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl"]
 git-tree-sha1 = "7a214fdac5ed5f59a22c2d9a885a16da1c74bbc7"
 uuid = "559328eb-81f9-559d-9380-de523a88c83c"
 version = "1.0.17+0"
+
+[[deps.GEOS_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl"]
+git-tree-sha1 = "fdaf62d2354bb398652ee612d487eb19d74468a6"
+uuid = "d604d12d-fa86-5845-992e-78dc15976526"
+version = "3.14.1+0"
 
 [[deps.Gamma]]
 deps = ["LogExpFunctions"]
@@ -871,6 +878,20 @@ version = "0.6.4"
 deps = ["Artifacts", "LibSSH2_jll", "Libdl", "OpenSSL_jll", "Zlib_jll", "nghttp2_jll"]
 uuid = "deac9b47-8bc7-5906-a0fe-35ac56dc84c0"
 version = "8.15.0+0"
+
+[[deps.LibGEOS]]
+deps = ["CEnum", "Extents", "GEOS_jll", "GeoInterface"]
+git-tree-sha1 = "7e6532862e2970e645ad762da4725c601a7c9ae9"
+uuid = "a90b1aa1-3769-5649-ba7e-abc5a9d163eb"
+version = "0.9.7"
+
+    [deps.LibGEOS.extensions]
+    LibGEOSMakieExt = "Makie"
+    LibGEOSRecipesBaseExt = "RecipesBase"
+
+    [deps.LibGEOS.weakdeps]
+    Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
+    RecipesBase = "3cdcf5f2-1ef4-517c-9805-6587b60abb01"
 
 [[deps.LibGit2]]
 deps = ["LibGit2_jll", "NetworkOptions", "Printf", "SHA"]

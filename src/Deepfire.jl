@@ -71,6 +71,12 @@ function allitems(collection; limit = 10_000, kw...)
     GeoJSON.FeatureCollection(; features = feats)
 end
 
+"One feature by id, e.g. `feature(\"clusters\", cluster_id)`."
+function feature(collection, id)
+    r = HTTP.get("$FEATURES/collections/deepfire:$collection/items/$collection.$id", headers(); query = Dict("f" => "application/geo+json"))
+    GeoJSON.read(r.body; numbertype = Float64)
+end
+
 "Queryable (filterable) attributes of a collection, as the JSON Schema the API publishes."
 function queryables(collection)
     r = HTTP.get("$FEATURES/collections/deepfire:$collection/queryables", headers(); query = Dict("f" => "application/schema+json"))

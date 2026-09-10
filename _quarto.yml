@@ -14,6 +14,8 @@ website:
         text: Overview
       - href: colorado-wyoming.qmd
         text: Colorado and Wyoming
+      - href: comparison.qmd
+        text: WFIGS comparison
       - href: coverage.qmd
         text: Data coverage
       - href: docs/api-notes.md
