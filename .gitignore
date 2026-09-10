@@ -1,0 +1,5 @@
+# credentials -- never commit
+.env
+.token
+# cached API responses
+data/

@@ -1,0 +1,22 @@
+name = "Deepfire"
+uuid = "e889d994-6cbf-4775-8fd7-96970d0de40b"
+version = "0.1.0"
+authors = ["Josh Day <emailjoshday@gmail.com>"]
+
+[deps]
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+GeoJSON = "61d90e0f-e114-555e-ac52-39dfb47a3ef9"
+GeoMakie = "db073c08-6b98-4ee5-b6a4-5efafb3259c6"
+HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+NaturalEarth = "436b0209-26ab-4e65-94a9-6526d86fea76"
+
+[compat]
+CairoMakie = "0.15.14"
+Dates = "1.11.0"
+GeoJSON = "0.8.4"
+GeoMakie = "0.7.17"
+HTTP = "2.6.7"
+JSON3 = "1.14.3"
+NaturalEarth = "0.1.1"
